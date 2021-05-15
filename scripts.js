@@ -100,8 +100,8 @@ const DOM = {
 
 const Utils = {
     formatAmount(value) {
-        value = Number(value.replace(/\,\./g, "")) * 100
-        return value
+        value = value * 100
+        return Math.round(value)
     },
     formatDate(date) {
         const splittedDate = date.split("-") /* split é separar, aplicamos uma string para separar a data pelos traços (2021-05-14) e os converte para um array */
